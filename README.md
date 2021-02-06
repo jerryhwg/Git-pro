@@ -1,2 +1,2 @@
 # git
-Git how-to
+Git How-To
