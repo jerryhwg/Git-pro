@@ -3,7 +3,7 @@
 ## git branch management
 
 list all local branches
-```bash
+```console
 git branch
 ```
 create a new branch
