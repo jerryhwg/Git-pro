@@ -31,3 +31,16 @@ shortcut for creating a branch with checkout
 ```console
 git checkout -b <name>
 ```
+
+## merging branches
+
+**fast forward**: when there are no further commits in the receiving branch (master) after the commits where feature branch was created
+
+1. create a new feature branch from the main branch (master)
+2. make changes in the new branch and commit them
+3. checkout to master branch (receiving branch)
+4. merge feature branch to the receiving branch (master)
+
+```console
+git merge <feature-branch>
+```
