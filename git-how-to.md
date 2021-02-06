@@ -41,6 +41,24 @@ git checkout -b <name>
 3. checkout to master branch (receiving branch)
 4. merge feature branch to the receiving branch (master)
 
+**3 way merge**
+
+1. create a new branch
+2. add commits in the new branch
+3. checkout to master and add some commits there
+4. merge the branch into the master branch
+
 ```console
 git merge <feature-branch>
 ```
+
+**merge conflicts**: same files were edited in both branches
+
+1. create a new branch
+2. change a file in the new branch
+3. return to the master branch and change the same file
+4. try to merge the new branch to the master branch
+5. resolve conflicts manually
+6. stage the file with resolved conflicts
+7. commit changes
+8. git will create merge commit
