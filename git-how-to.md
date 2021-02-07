@@ -112,3 +112,10 @@ clean up after deleting branch on remote origin
 git remote prune origin
 git branch -d <name>
 ```
+
+create remote branch based on local branch
+```console
+git checkout -b <name>
+# make some changes and commits
+git push -u
+```
