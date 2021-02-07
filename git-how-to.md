@@ -73,14 +73,18 @@ git push
 fetch update from remote repository to local git repository
 ```console
 git fetch
+git fetch -v
 ```
 
-merge changes from remote repository to working directory
+merge remote branch into current branch(working directory)
 
-git fetch + git merge(remote master branch into local master branch)
+`git pull` = `git fetch` + `git merge FETCH_HEAD`
 ```console
 git pull
+git pull -v
 ```
+
+NOTE: git pull updates only single local currently checked out branch
 
 check remote repository
 ```console
