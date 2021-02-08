@@ -107,15 +107,47 @@ git remote show origin
 git remote show origin
 ```
 
-clean up after deleting branch on remote origin
+create a remote branch after creating a branch on the local repository
+```console
+git checkout -b <name>
+# make some changes and commits
+git push -u origin <name>
+```
+
+clean up after deleting a branch in the remote repository
 ```console
 git remote prune origin
 git branch -d <name>
 ```
 
-create remote branch based on local branch
+update tracking status after deleting a branch in the remote repository
 ```console
-git checkout -b <name>
-# make some changes and commits
-git push -u
+# create a branch in the remote repository
+git fetch
+git branch -a
+git checkout <name>
+# delete a branch in the remote repository
+git fetch
+git branch -vv
+git remote update origin --prune
+git branch -vv
+# to remove the branch locally
+git branch -d <name>
 ```
+
+delete a remote branch from local terminal
+```console
+git checkout <name>
+git push origin -d <name>
+git checkout master
+git branch -D <name>
+git branch -a
+```
+
+git show-ref
+```console
+git show-ref
+git show-ref master
+```
+
+## pull requests
