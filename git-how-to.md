@@ -151,3 +151,40 @@ git show-ref master
 ```
 
 ## pull requests
+
+**pull request**: github, bitbucket
+
+**merge reuqest**: gitlab
+
+## git tags
+
+list git tag
+```console
+git tag
+```
+
+create a new tag (lightweight)
+```console
+git tag v1.0.0
+```
+
+show dtail of a tag
+```console
+git show v1.0.0
+```
+
+create a new tag (annotated)
+```console
+git tag -a v1.0.0 -m "Initial tag"
+git tag -v v1.0.0
+```
+
+pushing tag to remote
+```console
+git push --tags
+```
+
+```console
+git push -v origin v1.0.1
+git push -v
+```
