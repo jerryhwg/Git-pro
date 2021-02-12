@@ -270,12 +270,17 @@ git reset HEAD~5
 ```
 
 ## git revert
+
+git revert is used to record some new commits to reverse the effect of some earlier commits (often only a faulty one)
+
 - single commit
 - not delete a history
 
+
 ```console
-git revert HEAD (= last commit)
 git revert <commit id to remove>
+git revert HEAD (= last commit)
+git revert HEAD~3
 ```
 
 ```console
