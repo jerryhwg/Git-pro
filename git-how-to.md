@@ -269,6 +269,19 @@ reset last 5 commits
 git reset HEAD~5
 ```
 
+## git revert
+- single commit
+- not delete a history
+
+```console
+git revert HEAD (= last commit)
+git revert <commit id to remove>
+```
+
+```console
+git show <SHA ID>
+```
+
 ## Note
 
-* Avoid using git rebase, reset, revert in prod, release branch
+* Avoid using git rebase, reset in prod, release branch
