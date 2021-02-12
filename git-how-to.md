@@ -188,3 +188,87 @@ git push --tags
 git push -v origin v1.0.1
 git push -v
 ```
+
+## git rebase
+
+```console
+git checkout feature1
+# rebase feature1 branch on top of the base(master) branch
+git rebase master
+git checkout master
+# merge feature branch into the base(master) branch using fast forward
+git merge feature1
+git branch -d feature1
+git push -v
+```
+
+## git ignore
+
+Useful links
+
+* https://www.toptal.com/developers/gitignore
+* https://github.com/github/gitignore 
+
+Untrack files already added to git repository based on .gitignore
+* https://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/
+
+## git log
+
+git lg
+```console
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+git log
+```console
+git log
+git log --oneline
+git log --graph (--oneline)
+git log --stat
+git log -5 (--oneline)
+```
+
+```console
+git shortlog -n -s -e
+```
+
+```console
+git log --author="JH"
+grep
+```
+
+## git reset
+
+git reset  
+- `git reset --mixed <SHA hash>`
+- discard commit
+- discard changes in staging area (index)
+- keep changes in working directory
+```console
+git reset <commit id to move to>
+```
+
+git reset --soft
+- discard commit
+- keep changes in staging area (index)
+- keep changes in working directory
+```console
+git reset --soft <SHA hash>
+```
+
+git reset --hard
+- discard commit
+- discard changes in staging area (index)
+- discard changes in working directory
+```console
+git reset --hard <SHA hash>
+```
+
+reset last 5 commits
+```console
+git reset HEAD~5
+```
+
+## Note
+
+* Avoid using git rebase, reset, revert in prod, release branch
