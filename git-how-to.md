@@ -1,5 +1,19 @@
 # Git How-To
 
+## Contents
+
+* [git branch management](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-branch-management])
+* [merging branches](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#merging-branches)
+* [git push, fetch, pull](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-push-fetch-pull)
+* [pull requests](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#pull-requests)
+* [git tags](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-tags)
+* [git rebase](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-rebase)
+* [git ignore](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-ignore)
+* [git log](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-log)
+* [git reset](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-reset)
+* [git revert](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-revert)
+* [git advanced](https://github.com/jerryhwg/git_pro/blob/main/git-how-to.md#git-advanced)
+
 ## git branch management
 
 list all local branches
@@ -364,6 +378,6 @@ git rebasing with squashing
 
 * multiple commits from this branch will be rebased
 
-## Note
+## Appendix: notes
 
 1. Avoid using git rebase, reset, amend in prod, release branch
