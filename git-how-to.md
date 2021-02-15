@@ -273,7 +273,7 @@ git reset HEAD~5
 
 git revert is used to record some new commits to reverse the effect of some earlier commits (often only a faulty one)
 
-- single commit
+- only a single commit
 - not delete a history
 
 
@@ -281,12 +281,30 @@ git revert is used to record some new commits to reverse the effect of some earl
 git revert <commit id to remove>
 git revert HEAD (= last commit)
 git revert HEAD~3
+git revert --continue
 ```
 
 ```console
 git show <SHA ID>
 ```
 
+## git advanced
+
+git ammend
+```console
+git commit --amend -m "new message for the last commit"
+git commit --amend --author="JH <jh@email.local>"
+```
+
+cherry-picking
+```console
+git cherry-pick <SHA ID of a commit from another branch>
+git cherry-pick --no-commit <SHA ID of a commit from another branch>
+```
+
+reflog
+* log of all git operations
+
 ## Note
 
-* Avoid using git rebase, reset in prod, release branch
+* Avoid using git rebase, reset, amend in prod, release branch
