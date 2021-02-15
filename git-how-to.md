@@ -3,31 +3,37 @@
 ## git branch management
 
 list all local branches
+
 ```console
 git branch
 ```
 
 create a new branch
+
 ```console
 git branch <name>
 ```
 
 checkout a specific branch
+
 ```console
 git checkout <name>
 ```
 
 delete a specific branch
+
 ```console
 git branch -d <name>
 ```
 
 rename a specific branch
+
 ```console
 git branch -m <old> <new>
 ```
 
 shortcut for creating a branch with checkout
+
 ```console
 git checkout -b <name>
 ```
@@ -41,7 +47,7 @@ git checkout -b <name>
 3. checkout to master branch (receiving branch)
 4. merge feature branch to the receiving branch (master)
 
-**3 way merge**
+**3 way merge**:
 
 1. create a new branch
 2. add commits in the new branch
@@ -66,11 +72,13 @@ git merge <feature-branch>
 ## git push, fetch, pull
 
 push to remote repository
+
 ```console
 git push
 ```
 
 fetch update from remote repository to local git repository
+
 ```console
 git fetch
 git fetch -v
@@ -79,6 +87,7 @@ git fetch -v
 merge remote branch into current branch(working directory)
 
 `git pull` = `git fetch` + `git merge FETCH_HEAD`
+
 ```console
 git pull
 git pull -v
@@ -87,27 +96,32 @@ git pull -v
 NOTE: git pull updates only single local currently checked out branch
 
 check remote repository
+
 ```console
 git remote -v
 ```
 
 list all (local and remote) branches
+
 ```console
 git branch -a
 ```
 
 tracking branch
+
 ```console
 git branch -vv
 ```
 NOTE: checkout remote branch will auto create (tracking) a local branch
 
 git remote show origin
+
 ```console
 git remote show origin
 ```
 
 create a remote branch after creating a branch on the local repository
+
 ```console
 git checkout -b <name>
 # make some changes and commits
@@ -115,12 +129,14 @@ git push -u origin <name>
 ```
 
 clean up after deleting a branch in the remote repository
+
 ```console
 git remote prune origin
 git branch -d <name>
 ```
 
 update tracking status after deleting a branch in the remote repository
+
 ```console
 # create a branch in the remote repository
 git fetch
@@ -136,6 +152,7 @@ git branch -d <name>
 ```
 
 delete a remote branch from local terminal
+
 ```console
 git checkout <name>
 git push origin -d <name>
@@ -146,6 +163,7 @@ git branch -a
 
 git show-ref
 ```console
+
 git show-ref
 git show-ref master
 ```
@@ -159,27 +177,32 @@ git show-ref master
 ## git tags
 
 list git tag
+
 ```console
 git tag
 ```
 
 create a new tag (lightweight)
+
 ```console
 git tag v1.0.0
 ```
 
 show dtail of a tag
+
 ```console
 git show v1.0.0
 ```
 
 create a new tag (annotated)
+
 ```console
 git tag -a v1.0.0 -m "Initial tag"
 git tag -v v1.0.0
 ```
 
 pushing tag to remote
+
 ```console
 git push --tags
 ```
@@ -215,11 +238,13 @@ Untrack files already added to git repository based on .gitignore
 ## git log
 
 git lg
+
 ```console
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 git log
+
 ```console
 git log
 git log --oneline
@@ -240,18 +265,22 @@ grep
 ## git reset
 
 git reset  
-- `git reset --mixed <SHA hash>`
-- discard commit
-- discard changes in staging area (index)
-- keep changes in working directory
+
+* `git reset --mixed <SHA hash>`
+* discard commit
+* discard changes in staging area (index)
+* keep changes in working directory
+  
 ```console
 git reset <commit id to move to>
 ```
 
 git reset --soft
-- discard commit
-- keep changes in staging area (index)
-- keep changes in working directory
+
+* discard commit
+* keep changes in staging area (index)
+* keep changes in working directory
+  
 ```console
 git reset --soft <SHA hash>
 ```
