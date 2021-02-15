@@ -69,6 +69,7 @@ git checkout -b <name>
 4. merge the branch into the master branch
 
 ```console
+git checkout master
 git merge <feature-branch>
 ```
 
@@ -107,7 +108,7 @@ git pull
 git pull -v
 ```
 
-NOTE: git pull updates only single local currently checked out branch
+`NOTE: git pull updates only single local currently checked out branch`
 
 check remote repository
 
@@ -126,7 +127,8 @@ tracking branch
 ```console
 git branch -vv
 ```
-NOTE: checkout remote branch will auto create (tracking) a local branch
+
+`NOTE: checkout remote branch will auto create a local branch (tracking)`
 
 git remote show origin
 
@@ -176,17 +178,19 @@ git branch -a
 ```
 
 git show-ref
-```console
 
+list references in a local repository
+
+```console
 git show-ref
 git show-ref master
 ```
 
 ## pull requests
 
-**pull request**: github, bitbucket
+pull request: github, bitbucket
 
-**merge reuqest**: gitlab
+merge reuqest: gitlab
 
 ## git tags
 
@@ -196,7 +200,7 @@ list git tag
 git tag
 ```
 
-create a new tag (lightweight)
+create a new tag # 1 (lightweight)
 
 ```console
 git tag v1.0.0
@@ -208,7 +212,7 @@ show dtail of a tag
 git show v1.0.0
 ```
 
-create a new tag (annotated)
+create a new tag # 2 (annotated)
 
 ```console
 git tag -a v1.0.0 -m "Initial tag"
@@ -219,11 +223,8 @@ pushing tag to remote
 
 ```console
 git push --tags
-```
 
-```console
 git push -v origin v1.0.1
-git push -v
 ```
 
 ## git rebase
@@ -273,12 +274,12 @@ git shortlog -n -s -e
 
 ```console
 git log --author="JH"
-grep
+git log --all --grep='Build v1.0'
 ```
 
 ## git reset
 
-git reset  
+git reset (mixed)
 
 * `git reset --mixed <SHA hash>`
 * discard commit
@@ -296,7 +297,7 @@ git reset --soft
 * keep changes in working directory
   
 ```console
-git reset --soft <SHA hash>
+git reset --soft <commit id to move to>
 ```
 
 git reset --hard
@@ -306,7 +307,7 @@ git reset --hard
 * discard changes in working directory
   
 ```console
-git reset --hard <SHA hash>
+git reset --hard <commit id to move to>
 ```
 
 reset last 5 commits
@@ -322,6 +323,14 @@ git revert is used to record some new commits to reverse the effect of some earl
 * only a single commit
 * not delete a history
 
+check a commit to revert
+
+```console
+git show <SHA ID>
+```
+
+git revert
+
 ```console
 git revert <commit id to remove>
 git revert HEAD (= last commit)
@@ -329,18 +338,7 @@ git revert HEAD~3
 git revert --continue
 ```
 
-```console
-git show <SHA ID>
-```
-
 ## git advanced
-
-git ammend
-
-```console
-git commit --amend -m "new message for the last commit"
-git commit --amend --author="JH <jh@email.local>"
-```
 
 cherry-picking
 
@@ -348,12 +346,6 @@ cherry-picking
 git cherry-pick <SHA ID of a commit from another branch>
 git cherry-pick --no-commit <SHA ID of a commit from another branch>
 ```
-
-reflog
-
-* log of all git operations
-* local repository only
-* 90 days keep
 
 git stashing
 
@@ -364,12 +356,6 @@ git stash
 git stash pop
 ```
 
-garbage collection
-
-```console
-git gc
-```
-
 git squash and merge
 
 * multiple commits from this branch will be combined into one branch
@@ -377,6 +363,25 @@ git squash and merge
 git rebasing with squashing
 
 * multiple commits from this branch will be rebased
+
+git ammend
+
+```console
+git commit --amend -m "new message for the last commit"
+git commit --amend --author="JH <jh@email.local>"
+```
+
+reflog
+
+* log of all git operations
+* local repository only
+* 90 days keep
+
+garbage collection
+
+```console
+git gc
+```
 
 ## Appendix: notes
 
