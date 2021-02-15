@@ -257,14 +257,17 @@ git reset --soft <SHA hash>
 ```
 
 git reset --hard
-- discard commit
-- discard changes in staging area (index)
-- discard changes in working directory
+
+* discard commit
+* discard changes in staging area (index)
+* discard changes in working directory
+  
 ```console
 git reset --hard <SHA hash>
 ```
 
 reset last 5 commits
+
 ```console
 git reset HEAD~5
 ```
@@ -273,9 +276,8 @@ git reset HEAD~5
 
 git revert is used to record some new commits to reverse the effect of some earlier commits (often only a faulty one)
 
-- only a single commit
-- not delete a history
-
+* only a single commit
+* not delete a history
 
 ```console
 git revert <commit id to remove>
@@ -291,20 +293,48 @@ git show <SHA ID>
 ## git advanced
 
 git ammend
+
 ```console
 git commit --amend -m "new message for the last commit"
 git commit --amend --author="JH <jh@email.local>"
 ```
 
 cherry-picking
+
 ```console
 git cherry-pick <SHA ID of a commit from another branch>
 git cherry-pick --no-commit <SHA ID of a commit from another branch>
 ```
 
 reflog
+
 * log of all git operations
+* local repository only
+* 90 days keep
+
+git stashing
+
+* useful for unsaved (uncommited) works when switching to another branch
+  
+```console
+git stash
+git stash pop
+```
+
+garbage collection
+
+```console
+git gc
+```
+
+git squash and merge
+
+* multiple commits from this branch will be combined into one branch
+
+git rebasing with squashing
+
+* multiple commits from this branch will be rebased
 
 ## Note
 
-* Avoid using git rebase, reset, amend in prod, release branch
+1. Avoid using git rebase, reset, amend in prod, release branch
