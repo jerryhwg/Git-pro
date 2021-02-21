@@ -383,6 +383,24 @@ garbage collection
 git gc
 ```
 
+local init and remote add
+
+```console
+git init
+git add .
+git commit -m "initial commits"
+git remote add origin git@github.com:jerryhwg/docker-react.git
+git push origin master
+```
+
+get the latest commit SHA
+
+```console
+git rev-parse HEAD
+```
+
 ## Appendix: notes
 
 1. Avoid using git rebase, reset, amend in prod, release branch
+
+2. [GitHub ssh-key setup](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
