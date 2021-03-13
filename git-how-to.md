@@ -221,6 +221,7 @@ git tag -a v1.0.0 -m "Initial tag"
 git tag -v v1.0.0
 git push -v --tags
 
+git tag -a v1.0.1 -m "Patch for v1.0.0"
 git push -v origin v1.0.1
 ```
 
