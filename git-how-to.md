@@ -194,35 +194,32 @@ merge reuqest: gitlab
 
 ## git tags
 
-list git tag
-
-```console
-git tag
-```
-
 create a new tag # 1 (lightweight)
 
 ```console
 git tag v1.0.0
-```
-
-show dtail of a tag
-
-```console
+git tag
 git show v1.0.0
 ```
 
-create a new tag # 2 (annotated)
+create a new tag # 2 (annotated) -- recommended
+
+* store tag message
+* store tag author and date
 
 ```console
 git tag -a v1.0.0 -m "Initial tag"
 git tag -v v1.0.0
 ```
 
+`NOTE`: tags must have unique names across repository
+
 pushing tag to remote
 
 ```console
-git push --tags
+git tag -a v1.0.0 -m "Initial tag"
+git tag -v v1.0.0
+git push -v --tags
 
 git push -v origin v1.0.1
 ```
