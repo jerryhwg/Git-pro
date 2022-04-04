@@ -148,13 +148,19 @@ git branch -a
 
 Tracking branch
 
+* View what tracking branches you have set up
+* list out your local branches with more information including what each branch is tracking and if your local branch is ahead, behind or both
+
 ```console
 git branch -vv
 ```
 
 `NOTE: checkout remote branch will auto create a local branch (tracking)`
 
-git remote show origin
+Git remote show origin
+
+* View more information about a particular remote
+* It lists the URL for the remote repository as well as the tracking branch information
 
 ```console
 git remote show origin
