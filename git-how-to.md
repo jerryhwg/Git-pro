@@ -18,13 +18,13 @@
 
 List all local branches
 
-```console
+```bash
 git branch
 ```
 
 List all (local and remote) branches
 
-```console
+```bash
 git branch -a
 ```
 
@@ -32,7 +32,7 @@ git branch -a
 
 Create a new branch
 
-```console
+```bash
 git branch <name>
 ```
 
@@ -40,7 +40,7 @@ git branch <name>
 
 Checkout a specific branch
 
-```console
+```bash
 git checkout <name>
 ```
 
@@ -48,7 +48,7 @@ git checkout <name>
 
 Delete a specific branch
 
-```console
+```bash
 git branch -d <name>
 ```
 
@@ -56,7 +56,7 @@ git branch -d <name>
 
 Rename a specific branch
 
-```console
+```bash
 git branch -m <old> <new>
 ```
 
@@ -64,7 +64,7 @@ git branch -m <old> <new>
 
 Shortcut for creating a branch with checkout
 
-```console
+```bash
 git checkout -b <name>
 ```
 
@@ -86,7 +86,7 @@ git checkout -b <name>
 3. checkout to master and add some commits there
 4. merge the branch into the master branch
 
-```console
+```bash
 git checkout master
 git merge <feature-branch>
 ```
@@ -106,19 +106,19 @@ git merge <feature-branch>
 
 Push to remote repository
 
-```console
+```bash
 git push
 ```
 
 Push while creating a new remote repository
 
-```console
+```bash
 git push --set-upstream origin {new branch name}
 ```
 
 Fetch update from remote repository to local git repository
 
-```console
+```bash
 git fetch
 git fetch -v
 ```
@@ -127,7 +127,7 @@ Pull: Merge remote branch into current branch(working directory)
 
 `git pull` = `git fetch` + `git merge FETCH_HEAD`
 
-```console
+```bash
 git pull
 git pull -v
 ```
@@ -136,13 +136,13 @@ git pull -v
 
 Check remote repository
 
-```console
+```bash
 git remote -v
 ```
 
 List all (local and remote) branches
 
-```console
+```bash
 git branch -a
 ```
 
@@ -151,7 +151,7 @@ Tracking branch
 * View what tracking branches you have set up
 * list out your local branches with more information including what each branch is tracking and if your local branch is ahead, behind or both
 
-```console
+```bash
 git branch -vv
 ```
 
@@ -162,28 +162,29 @@ Git remote show origin
 * View more information about a particular remote
 * It lists the URL for the remote repository as well as the tracking branch information
 
-```console
+```bash
 git remote show origin
 ```
 
-create a remote branch after creating a branch on the local repository
+Create a remote branch after creating a branch on the local repository
 
-```console
+```bash
 git checkout -b <name>
 # make some changes and commits
 git push -u origin <name>
 ```
 
-clean up after deleting a branch in the remote repository
+Clean up after deleting a branch in the remote repository
 
-```console
+```bash
+# in the branch
 git remote prune origin
 git branch -d <name>
 ```
 
-update tracking status after deleting a branch in the remote repository
+Update tracking status after deleting a branch in the remote repository
 
-```console
+```bash
 # create a branch in the remote repository
 git fetch
 git branch -a
@@ -197,9 +198,9 @@ git branch -vv
 git branch -d <name>
 ```
 
-delete a remote branch from local terminal
+Delete a remote branch from local terminal
 
-```console
+```bash
 git checkout <name>
 git push origin -d <name>
 git checkout master
@@ -211,7 +212,7 @@ git show-ref
 
 list references in a local repository
 
-```console
+```bash
 git show-ref
 git show-ref master
 ```
@@ -226,32 +227,32 @@ merge reuqest: gitlab
 
 list git tag
 
-```console
+```bash
 git tag
 ```
 
 create a new tag # 1 (lightweight)
 
-```console
+```bash
 git tag v1.0.0
 ```
 
 show dtail of a tag
 
-```console
+```bash
 git show v1.0.0
 ```
 
 create a new tag # 2 (annotated)
 
-```console
+```bash
 git tag -a v1.0.0 -m "Initial tag"
 git tag -v v1.0.0
 ```
 
 pushing tag to remote
 
-```console
+```bash
 git push --tags
 
 git push -v origin v1.0.1
@@ -259,7 +260,7 @@ git push -v origin v1.0.1
 
 ## git rebase
 
-```console
+```bash
 git checkout feature1
 # rebase feature1 branch on top of the base(master) branch
 git rebase master
@@ -284,13 +285,13 @@ Untrack files already added to git repository based on .gitignore
 
 git lg
 
-```console
+```bash
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 git log
 
-```console
+```bash
 git log
 git log --oneline
 git log --graph (--oneline)
@@ -298,11 +299,11 @@ git log --stat
 git log -5 (--oneline)
 ```
 
-```console
+```bash
 git shortlog -n -s -e
 ```
 
-```console
+```bash
 git log --author="JH"
 git log --all --grep='Build v1.0'
 ```
@@ -316,7 +317,7 @@ git reset (mixed)
 * discard changes in staging area (index)
 * keep changes in working directory
   
-```console
+```bash
 git reset <commit id to move to>
 ```
 
@@ -326,7 +327,7 @@ git reset --soft
 * keep changes in staging area (index)
 * keep changes in working directory
   
-```console
+```bash
 git reset --soft <commit id to move to>
 ```
 
@@ -336,13 +337,13 @@ git reset --hard
 * discard changes in staging area (index)
 * discard changes in working directory
   
-```console
+```bash
 git reset --hard <commit id to move to>
 ```
 
 reset last 5 commits
 
-```console
+```bash
 git reset HEAD~5
 ```
 
@@ -355,13 +356,13 @@ git revert is used to record some new commits to reverse the effect of some earl
 
 check a commit to revert
 
-```console
+```bash
 git show <SHA ID>
 ```
 
 git revert
 
-```console
+```bash
 git revert <commit id to remove>
 git revert HEAD (= last commit)
 git revert HEAD~3
@@ -372,7 +373,7 @@ git revert --continue
 
 cherry-picking
 
-```console
+```bash
 git cherry-pick <SHA ID of a commit from another branch>
 git cherry-pick --no-commit <SHA ID of a commit from another branch>
 ```
@@ -381,7 +382,7 @@ git stashing
 
 * useful for unsaved (uncommited) works when switching to another branch
   
-```console
+```bash
 git stash
 git stash pop
 ```
@@ -394,9 +395,9 @@ git rebasing with squashing
 
 * multiple commits from this branch will be rebased
 
-git ammend
+git amend
 
-```console
+```bash
 git commit --amend -m "new message for the last commit"
 git commit --amend --author="JH <jh@email.local>"
 ```
@@ -407,25 +408,25 @@ reflog
 * local repository only
 * 90 days keep
 
-garbage collection
+Garbage collection
 
-```console
+```bash
 git gc
 ```
 
-local init and remote add
+Local init and remote add
 
-```console
+```bash
 git init
 git add .
 git commit -m "initial commits"
 git remote add origin git@github.com:jerryhwg/docker-react.git
-git push origin master
+git push --set-upstream origin main
 ```
 
-get the latest commit SHA
+Get the latest commit SHA
 
-```console
+```bash
 git rev-parse HEAD
 ```
 
