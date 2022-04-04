@@ -22,6 +22,12 @@ List all local branches
 git branch
 ```
 
+List all (local and remote) branches
+
+```console
+git branch -a
+```
+
 > **VS Code**: left bottom corner click `main` to view local and remote branches
 
 Create a new branch
@@ -98,26 +104,26 @@ git merge <feature-branch>
 
 ## git push, fetch, pull
 
-push to remote repository
+Push to remote repository
 
 ```console
 git push
 ```
 
-push while creating a new remote repository
+Push while creating a new remote repository
 
 ```console
 git push --set-upstream origin {new branch name}
 ```
 
-fetch update from remote repository to local git repository
+Fetch update from remote repository to local git repository
 
 ```console
 git fetch
 git fetch -v
 ```
 
-merge remote branch into current branch(working directory)
+Pull: Merge remote branch into current branch(working directory)
 
 `git pull` = `git fetch` + `git merge FETCH_HEAD`
 
@@ -128,19 +134,19 @@ git pull -v
 
 `NOTE: git pull updates only single local currently checked out branch`
 
-check remote repository
+Check remote repository
 
 ```console
 git remote -v
 ```
 
-list all (local and remote) branches
+List all (local and remote) branches
 
 ```console
 git branch -a
 ```
 
-tracking branch
+Tracking branch
 
 ```console
 git branch -vv
