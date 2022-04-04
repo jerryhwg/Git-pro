@@ -54,13 +54,15 @@ Rename a specific branch
 git branch -m <old> <new>
 ```
 
+> **VS Code**: check out to a branch -> left pane -> Source Control -> Branch -> Rename Branch -> Rename
 
-
-shortcut for creating a branch with checkout
+Shortcut for creating a branch with checkout
 
 ```console
 git checkout -b <name>
 ```
+
+> **VS Code**: left pane -> Source Control -> Branch -> Create Branch -> Name one for the new branch
 
 ## merging branches
 
