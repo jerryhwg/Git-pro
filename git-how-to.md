@@ -16,7 +16,7 @@
 
 ## git branch management
 
-list all local branches
+List all local branches
 
 ```console
 git branch
@@ -24,7 +24,7 @@ git branch
 
 > **VS Code**: left bottom corner click `main` to view local and remote branches
 
-create a new branch
+Create a new branch
 
 ```console
 git branch <name>
@@ -32,7 +32,7 @@ git branch <name>
 
 > **VS Code**: left pane -> Source Control -> Branch -> Create Branch
 
-checkout a specific branch
+Checkout a specific branch
 
 ```console
 git checkout <name>
@@ -40,7 +40,7 @@ git checkout <name>
 
 > **VS Code**: left bottom corner click `main` -> select a branch to check out to
 
-delete a specific branch
+Delete a specific branch
 
 ```console
 git branch -d <name>
@@ -48,11 +48,13 @@ git branch -d <name>
 
 > **VS Code**: left pane -> Source Control -> Branch -> Delete Branch -> Select a branch to delete
 
-rename a specific branch
+Rename a specific branch
 
 ```console
 git branch -m <old> <new>
 ```
+
+
 
 shortcut for creating a branch with checkout
 
