@@ -1,6 +1,4 @@
-# git
-
-Git How-To
+# Git-pro
 
 [Git How-To](git-how-to.md)
 
