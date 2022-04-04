@@ -104,6 +104,12 @@ push to remote repository
 git push
 ```
 
+push while creating a new remote repository
+
+```console
+git push --set-upstream origin feature/branch
+```
+
 fetch update from remote repository to local git repository
 
 ```console
