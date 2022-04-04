@@ -22,11 +22,15 @@ list all local branches
 git branch
 ```
 
+> **VS Code**: left bottom corner click `main` to view local and remote branches
+
 create a new branch
 
 ```console
 git branch <name>
 ```
+
+> **VS Code**: left pane -> Source Control -> Branch -> Create Branch
 
 checkout a specific branch
 
@@ -34,11 +38,15 @@ checkout a specific branch
 git checkout <name>
 ```
 
+> **VS Code**: left bottom corner click `main` -> select a branch to check out to
+
 delete a specific branch
 
 ```console
 git branch -d <name>
 ```
+
+> **VS Code**: left pane -> Source Control -> Branch -> Delete Branch -> Select a branch to delete
 
 rename a specific branch
 
