@@ -73,7 +73,7 @@ git checkout -b <name>
 3. checkout to master branch (receiving branch)
 4. merge feature branch to the receiving branch (master)
 
-**3 way merge**:
+**3 way merge (no conflict)**:
 
 1. create a new branch
 2. add commits in the new branch
